@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portada Principal</title>
+    <style>
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #f5f5f5); /* Blanco → Gris claro */
+            color: #333;
+        }
+        div{
+            padding-bottom: 10px;
+        }
+         body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .cover-image-container {
+        width: 100%;
+        height: auto;
+      }
+
+      .cover-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+
+      /* Estilos para el contenedor de las columnas */
+      .column-container {
+        display: flex;
+        justify-content: space-around; /* Distribuye las columnas con espacio entre ellas */
+        gap: 40px; /* Espacio entre las columnas */
+        max-width: 900px; /* Ancho máximo para el contenedor */
+        margin: 0 auto; /* Centra el contenedor en la página */
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+      }
+      hr {
+        border: none; /* Elimina el borde predeterminado */
+        border-top: 1px solid #ccc; /* Crea un nuevo borde superior sólido */
+        margin: 20px 0; /* Añade espacio arriba y abajo de la línea */
+      }
+      .new-container {
+        text-align: center; /* Centra el contenido en línea (texto e imagen) */
+        padding: 20px; /* Espacio interno para el contenedor */
+        margin: 20px auto; /* Centra el contenedor en la página */
+        max-width: 600px; /* Limita el ancho del contenedor */
+      }
+
+      .new-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px; /* Bordes redondeados para la imagen */
+      }
+      /* Media Query para pantallas pequeñas */
+      @media (max-width: 600px) {
+        .column-container {
+          flex-direction: column; /* Apila las columnas verticalmente en móviles */
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover-image-container">
+      <img
+        src="{% static 'images/imagen4.jpeg' %}"
+        alt="Imagen de portada"
+        class="cover-image"
+      />
+    </div>
+    </div>
+  </body>
+</html>

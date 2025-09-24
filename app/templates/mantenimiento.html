@@ -1,0 +1,143 @@
+{% load static %}
+<html>
+    <style>
+    /* Estilos generales para el cuerpo de la página */
+    h1 {
+        color: #646a5e;
+        font-size: 30;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    hr {
+        color: #646a5e;
+        height: 5px;
+        background-color: #646a5e;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    footer {
+        display: flex;
+        justify-content: right;
+        padding: 10px 15px;
+        background-color: #ccc5b2;
+        color: #646a5e;
+    }
+
+    footer p {
+        color: 646a5e;
+        text-decoration: none;
+        font-size: 20;
+        font-weight: 700;
+    }
+
+    /* Estilos para el contenedor principal de las columnas */
+    .container {
+        display: flex;
+        justify-content: center;
+        /* Centra el contenido horizontalmente */
+        align-items: center;
+        /* ¡IMPORTANTE! Alinea las columnas verticalmente */
+        gap: 40px;
+        /* Espacio entre las dos columnas */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para las columnas */
+    .left-column {
+        flex: 0.5;
+        padding: 20px;
+    }
+
+    .right-column {
+        flex: 1;
+        /* Permite que cada columna ocupe el espacio disponible de forma equitativa */
+        padding: 20px;
+        display: flex;
+    }
+
+    /* Agregamos el centrado a la columna derecha para que la imagen siempre esté en el centro */
+    .right-column {
+        display: flex;
+        /* Convierte la columna en un contenedor flexible */
+        justify-content: center;
+        /* Centra el contenido horizontalmente */
+        align-items: center;
+        /* Centra el contenido verticalmente */
+    }
+
+    .left-column h2 {
+        color: #646a5e;
+        font-size: 25;
+        font-weight: 200;
+        margin-top: 0;
+        text-align: right;
+    }
+
+    .right-column img {
+        max-width: 100%;
+        height: auto;
+        /* Asegura que la imagen se ajuste al tamaño de la columna sin distorsionarse */
+        border-radius: 8px;
+    }
+
+    /* Media query para hacer el diseño responsive en dispositivos móviles */
+    @media (max-width: 900px) {
+        .container {
+            flex-direction: column;
+            /* Apila las columnas verticalmente en pantallas pequeñas */
+            align-items: center;
+            /* Centra el contenido cuando se apila */
+            gap: 20px;
+        }
+
+        .left-column,
+        .right-column {
+            width: 100%;
+            padding: 0;
+        }
+    }
+   
+</style>
+<head>
+    <title>Mantenimiento</title>
+</head>
+
+<body>
+    <div>{% include "menu.html" %}</div>
+    <div>
+        <h1>Mantenimiento</h1>
+        <div class="container">
+            <div class="right-column">
+                <img src="{% static 'images/manten.png' %}" alt="Mantenimiento" />
+            </div>
+             <div class="left-column">
+                <hr>
+                <h2>Albañileria</h2>
+                <h2>Instalaciones</h2>
+                <h2>Yeso, tablaroca y pintura</h2>
+                <h2>Limpieza</h2>
+                <hr />
+            </div>
+        </div>
+    </div>
+<br>
+    <div>
+        <footer>
+            <p>Solidez que inspira, diseño que perdura.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+{% load static %}
+<html>
+<style>
+    .h1 {
+        margin: 10px 0 5px;
+        font-size: 1.1rem;
+        color: #646a5e;
+    }
+
+    .gallery {
+        max-width: 600px;
+        max-height: 800px;
+        margin: 0 auto;
+    }
+
+    .gallery img {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+    }
+
+    /* Cada celda mantiene una proporción agradable */
+    .item {
+        background-color: #ccc5b2;
+        border-radius: var(--card-radius);
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        display: block;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: 1/1;
+        /* recorta para llenar la celda */
+        /* ajustar proporción; puede cambiar a 1/1 para cuadrado */
+    }
+
+    .text-container {
+        max-width: 500px;
+        margin: 0 auto;
+        /* centrado con espacio arriba/abajo */
+        padding: 20px;
+       background-color: #ccc5b2;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        /* esquinas redondeadas */
+        font-family: "Times New Roman", Times, serif;
+        line-height: 1.3;
+        color: #646a5e;
+        font-weight: 900;
+        /* color del texto */
+    }
+
+    .text-container h2 {
+        margin-top: 0;
+        font-size: 3.5rem;
+        color: #646a5e;
+    }
+    .cover-image-container {
+        width: 100%;
+        height: auto;
+        border: none; 
+      }
+
+      .cover-image {
+        border: none; 
+         max-width: 100%; 
+        height: auto;
+        display: block;
+      }
+</style>
+
+<head>
+    <title>Portafolio</title>
+</head>
+
+<body>
+    <div>{% include "menu.html" %}</div>
+    <div>{% include "mosaico_cabecera.html" %}</div>
+    <hr />
+    <div>
+        <h1 style="color: #646a5e; font-size: 40; font-weight: bold;">Portafolio</h1>
+        <h1 style="color: #646a5e; font-size: 30; font-weight: 400; text-align: center;">Confianza | Calidad |
+            Eficiencia | Colaboración | Innovación</h1>
+        <hr>
+        <div class="gallery">
+            <figure class="item">
+                <img src="{% static 'images/collage.jpg' %}" alt="Collage SID" width="800" height="800" />
+            </figure>
+        </div>
+        <div class="text-container">
+            <p>
+                Ingeniería, arquitectura y acabados
+                de alto nivel residencial, comercial e
+                institucional.
+                Diseñamos y construimos tu visión.
+            </p>
+        </div>
+        <hr>
+       <div class="cover-image-container">
+      <img
+        src="{% static 'images/portada_portafolio.png' %}"
+        alt="Portada Portafolio"
+        class="cover-image"
+      />
+    </div>
+        <div>{% include "mosaico_piepagina.html" %}</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+{% load static %}
+<html>
+  <head>
+    <style>
+      footer {
+        display: flex;
+        justify-content: right;
+        padding: 10px 15px;
+        background-color: #ccc5b2;
+        color: #646a5e;
+      }
+      footer p {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      footer img {
+        padding: 5px 5px;
+      }
+      .texto {
+        color: #646a5e;
+        font-weight: bold;
+      }
+      footer svg {
+        height: 40px;
+        width: 40px;
+        padding-right: 20px;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 20px 0;
+      }
+      .new-container {
+        text-align: center;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+      .new-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      @media (max-width: 600px) {
+        .column-container {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <hr>
+    <div class="new-container">
+      <p style="font-size: 25px; font-weight: 900;">
+        "Solidez que inspira, diseño que perdura"
+      </p>
+      <img
+        src="{% static 'images/LOGO1.png' %}"
+        alt="SID"
+        width="100"
+        height="100"
+      />
+    </div>
+    <hr>
+    <footer>
+      <div>
+        <p class="texto">
+          Luz Saviñon 307, Colonia del Valle, Delegación Benito Juarez, C.P.03100
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

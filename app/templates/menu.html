@@ -1,0 +1,78 @@
+{% load static %}
+<html>
+  <style>
+    .navbar-container {
+      display: flex;
+      align-items: center; /* Centra verticalmente imagen y menú */
+      background-color: #ccc5b2;
+      padding: 20px 20px;
+    }
+
+    .navbar-logo {
+      width: 60px;
+      height: auto;
+      margin-right: 40px;
+      margin-left: 10px;
+    }
+
+    .navbar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #ccc5b2;
+    }
+    .navbar li {
+      padding: 10px 20px;
+      height: 30px;
+      display: flex;
+      color: #646a5e;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease; /* añade transform */
+      align-items: center; /* centra texto verticalmente */
+      justify-content: center;
+      margin-right: 10px; /* separación entre botones */
+    }
+    .navbar li:hover {
+      background-color: #414141;
+      color: #e0e0d4;
+      border-radius: 6px;
+      transform: translateY(-5px); /* sube 5px desde la base */
+    }
+    .navbar a {
+      text-decoration: none; /* Quita el subrayado */
+      color: inherit; /* Hereda el color del texto del <li> o del padre */
+    }
+
+    .navbar a:visited {
+      color: inherit; /* Evita que se pongan morados */
+    }
+
+    .navbar a:hover,
+    .navbar a:active {
+      color: inherit; /* Evita cambios al pasar el mouse o dar clic */
+      text-decoration: none; /* Mantén sin subrayado */
+    }
+  </style>
+  <body>
+    <div class="navbar-container">
+      <a href="{% url 'home' %}">
+      <img
+        src="{% static 'images/LOGO2.png' %}"
+        alt="Logxxxo"
+        class="navbar-logo"
+        width="50"
+        height="50"
+      />
+      </a>
+      <ul class="navbar">
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a href="{% url 'servicios' %}">Servicios</a></li>
+        <li><a href="{% url 'portafolio' %}">Portafolio</a></li>
+        <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+        <li><a href="{% url 'contacto' %}">Contacto</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

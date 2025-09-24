@@ -1,0 +1,70 @@
+<html>
+  <style>
+    p {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #646a5e;
+      margin-bottom: 1em;
+      text-indent: 2em;
+    }
+
+    h2 {
+      color: #646a5e;
+      font-size: 30;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .text-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #e7e2d4;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-family: "Georgia", serif;
+      color: #333;
+      line-height: 1.6;
+      text-indent: 2em;
+      /* sangría para todo el texto dentro del contenedor */
+    }
+  </style>
+
+  <head>
+    <title>Nosotros</title>
+  </head>
+
+  <body>
+    <div>{% include "menu.html" %}</div>
+    <div>{% include "mosaico_cabecera.html" %}</div>
+    <div>
+      <h1 style="color: #646a5e; font-size: 40; font-weight: bold">Nosotros</h1>
+      <h2>Descripción General</h2>
+      <p class="text-container">
+        Somos un grupo de ingenieros civiles y arquitectos con años de
+        experiencia en la ejecucion, control, administración y programación de
+        obra civil y de interiores, así como diseño de proyectos integrales de
+        arquitectura y arquitectura de interiores. Buscamos crear y construir
+        espacios que reflejen ambientes únicos para cada cliente.
+      </p>
+      <h2>Misión</h2>
+      <p class="text-container">
+        Brindar servicios integrales de diseño y construcción que combine
+        solidez estructural y estética funcional, garantizando a nuestros
+        clientes la tranquilidad de delegar su proyecto en manos de
+        profesionales. Nos distinguimos por ejecutar con excelencia, cumplir
+        tiempos y superar expectativas, ya sea como contratistas directos o como
+        subcontratistas que resuelven problemas de manera ágil y efectiva.
+      </p>
+      <h2>Visión</h2>
+      <p class="text-container">
+        Convertirnos en la empresa de referencia en construcción y acabados en
+        México, reconocida por nuestra confiabilidad, rapidez y calidad, siendo
+        el aliado estratégico de arquitectos, desarrollado y clientes
+        particulares que buscan soluciones integrales sin complicaciones.
+      </p>
+    </div>
+    <div>{% include "mosaico_piepagina.html" %}</div>
+  </body>
+</html>

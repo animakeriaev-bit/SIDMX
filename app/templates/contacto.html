@@ -1,0 +1,105 @@
+{% load static %}
+<html>
+<style>
+    h1 {
+        color: #646a5e;
+        font-size: 30;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    h2 {
+        color: #646a5e;
+        font-size: 30;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        /* espacio entre los bloques */
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #e7e2d4;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-text {
+        flex: 1;
+        /* ocupa la mayor parte del espacio */
+        font-family: "Georgia", serif;
+        color: #646a5e;
+        line-height: 1.5;
+        text-align: center;
+    }
+.contact-text .line-item {
+    display: flex;          /* contenedor horizontal */
+    align-items: center;    /* centra verticalmente la imagen y el texto */
+    gap: 10px;              /* espacio entre la imagen y el texto */
+    margin-bottom: 10px;    /* espacio entre líneas */
+    justify-content: center;
+}
+
+.line-item img {
+    width: 30px;            /* tamaño de la imagen */
+    height: auto;
+    justify-content: center;
+}
+</style>
+
+<head>
+    <title>Contacto</title>
+</head>
+
+<body>
+    <div>{% include "menu.html" %}</div>
+    <div>{% include "mosaico_cabecera.html" %}</div>
+    <hr />
+    <div>
+        <h1>Contacto</h1>
+        <h2>Te ayudamos a diseñar y construir tu sueño.</h2>
+    </div>
+    <div class="contact-container">
+        <div class="contact-item">
+            <div class="contact-text">
+                <h2>Contacto</h2>
+                <div class="line-item">
+                    <img src="{% static 'images/gmail.png' %}" alt="Correo">
+                    <p><strong>Email:</strong> sidserviciosmx@gmail.com</p>
+                </div>
+                <div class="line-item">
+                    <img src="{% static 'images/WA.png' %}" alt="WhaatsApp">
+                    <p><strong>Telefono:</strong> 56 2166 3685 / 5548028901</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-text">
+                <h2>Redes</h2>
+                <div class="line-item">
+                    <img src="{% static 'images/insta.png' %}" alt="Instagram">
+                    <p><strong>Instagram:</strong> SID Servicios MX</p>
+                </div>
+                <div class="line-item">
+                    <img src="{% static 'images/face.png' %}" alt="Facebook">
+                    <p><strong>Facebook:</strong>  SID Servicios Integrales de Diseño y Construcción </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>{% include "mosaico_piepagina.html" %}</div>
+</body>
+
+</html>
