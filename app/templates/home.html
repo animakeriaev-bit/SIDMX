@@ -1,195 +1,192 @@
 {% load static %}
-<html>
-     <style>
-        /* Fondo blanco-gris */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #ffffff, #f5f5f5); /* Blanco → Gris claro */
-            color: #333;
-        }
-        div{
-            padding-bottom: 10px;
-        }
-         body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background-color: #f4f4f4;
-      }
+<style>
+  /* Fondo blanco-gris */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5); /* Blanco → Gris claro */
+    color: #333;
+  }
 
-      .cover-image-container {
-        width: 100%;
-        height: auto;
-      }
+  /* Estilos generales */
+  div {
+    padding-bottom: 10px;
+  }
 
-      .cover-image {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-        background-color: #f8f8f8;
-        color: #333;
-      }
+  .cover-image-container {
+    width: 100%;
+    height: auto;
+  }
 
-      /* Estilos para el contenedor de las columnas */
-      .column-container {
-        display: flex;
-        justify-content: space-around; /* Distribuye las columnas con espacio entre ellas */
-        gap: 40px; /* Espacio entre las columnas */
-        max-width: 900px; /* Ancho máximo para el contenedor */
-        margin: 0 auto; /* Centra el contenedor en la página */
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-      }
+  .cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilos para el contenedor de las columnas */
+  .column-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-      /* Estilos para cada columna */
-      .column {
-        flex: 1; /* Permite que las columnas crezcan para ocupar el espacio disponible */
-        padding: 35px;
-        border-radius: 6px;
-      }
+  /* Estilos para cada columna */
+  .column {
+    flex: 1;
+    padding: 35px;
+    border-radius: 6px;
+  }
 
-      .column h2 {
-        font-size: 1em;
-        color: #555;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 10px;
-        margin-top: 0;
-      }
-      .column2 h2 {
-        font-size: 1em;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 20px;
-        margin-top: 0;
-      }
+  .column h2 {
+    font-size: 1em;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
 
-      .column p {
-        line-height: 1.6;
-      }
-      ul li {
-        margin-bottom: 10px; /* Puedes ajustar el valor de 10px a tu gusto */
-      }
+  .column2 h2 {
+    font-size: 1em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-top: 0;
+  }
 
-      * Estilos para el contenedor principal de las especialidades */ .column3 {
-        text-align: center;
-        padding: 20px;
-      }
+  .column p {
+    line-height: 1.6;
+  }
 
-      /* Contenedor que organiza los iconos en una fila */
-      .icon-container {
-        display: flex;
-        justify-content: space-around; /* Distribuye el espacio entre los iconos */
-        align-items: center;
-        flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
-        gap: 20px; /* Añade un espacio entre los elementos */
-      }
+  ul li {
+    margin-bottom: 10px;
+  }
 
-      /* Cada "columna" que contiene un icono y su texto */
-      .icon-item {
-        display: flex;
-        flex-direction: column; /* Apila el icono y el texto verticalmente */
-        align-items: center; /* Centra el contenido horizontalmente */
-        text-align: center;
-        width: 30%; /* Para que quepan 3 elementos en una fila */
-      }
+  /* Estilos para el contenedor principal de las especialidades */
+  .column3 {
+    text-align: center;
+    padding: 20px;
+  }
 
-      /* Estilos para los títulos de los iconos */
-      .icon-item p {
-        margin-top: 5px; /* Pequeño espacio entre la imagen y el texto */
-        font-size: 1em;
-        font-weight: 100;
-      }
+  /* Contenedor que organiza los iconos en una fila */
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-      /* Estilos para las imágenes */
-      .icon-item img {
-        max-width: 100%;
-        height: auto;
-      }
-        </style>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-      </head>
-    <body class="body">
-        <div>
-            {% include "menu.html" %}
-        </div>
-        <div>
-            {% include "mosaico_cabecera.html" %}
-        </div>
-        <div>
-      <hr />
+  /* Cada "columna" que contiene un icono y su texto */
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+  }
+
+  /* Estilos para los títulos de los iconos */
+  .icon-item p {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: 100;
+  }
+
+  /* Estilos para las imágenes */
+  .icon-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Media queries para las columnas */
+  @media (max-width: 768px) {
+    .column-container {
+      flex-direction: column; /* Apila las columnas verticalmente */
+      gap: 20px; /* Reduce el espacio entre ellas */
+    }
+    
+    .column, .column2 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+<div>
+  {% include "menu.html" %}
+</div>
+<div>
+  {% include "mosaico_cabecera.html" %}
+</div>
+<div>
+  <hr />
+</div>
+<div class="column-container">
+  <div>
+    <h2 class="column2" style="color: #646a5e">Atención a:</h2>
+  </div>
+  <div class="column">
+    <h2></h2>
+    <ul>
+      <li>Comercial</li>
+      <li>Residencial</li>
+      <li>Departamental</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h2></h2>
+    <ul>
+      <li>Despachos de arquitectura</li>
+      <li>Interioristas</li>
+      <li>Constructoras</li>
+      <li>Todo aquel que tenga una idea y quiera verla realizada</li>
+    </ul>
+  </div>
+</div>
+<div>
+  <hr />
+</div>
+<div class="column3">
+  <h2>Especialidades :</h2>
+  <div class="icon-container">
+    <div class="icon-item">
+      <img
+        src="{% static 'images/LOGO3.png' %}"
+        alt="Ingenieria"
+        width="50"
+        height="50"
+      />
+      <h3>Ingenieria</h3>
+      <p>Solidez estructural</p>
     </div>
-    <div class="column-container">
-      <div>
-        <h2 class="column2" style="color: #646a5e">Atención a:</h2>
-      </div>
-      <div class="column">
-        <h2></h2>
-        <ul>
-          <li>Comercial</li>
-          <li>Residencial</li>
-          <li>Departamental</li>
-        </ul>
-      </div>
-      <div class="column">
-        <h2></h2>
-        <ul>
-          <li>Despachos de arquitectura</li>
-          <li>Interioristas</li>
-          <li>Constructoras</li>
-          <li>Todo aquel que tenga una idea y quiera verla realizada</li>
-        </ul>
-      </div>
+    <div class="icon-item">
+      <img
+        src="{% static 'images/LOGO4.png' %}"
+        alt="Icono 2"
+        width="50"
+        height="50"
+      />
+      <h3>Arquitectura</h3>
+      <p>Diseño y acabados que elevan cada espacio</p>
     </div>
-    <div>
-      <hr />
+    <div class="icon-item">
+      <img
+        src="{% static 'images/LOGO5.png' %}"
+        alt="Icono 3"
+        width="50"
+        height="50"
+      />
+      <h3>Gestión y Control</h3>
+      <p>Planeación, costos claros y reportes puntuales</p>
     </div>
-    <div class="column3">
-      <h2>Especialidades :</h2>
-      <div class="icon-container">
-        <div class="icon-item">
-          <img
-            src="{% static 'images/LOGO3.png' %}"
-            alt="Ingenieria"
-            width="50"
-            height="50"
-          />
-          <h3>Ingenieria</h3>
-          <p>Solidez estructural</p>
-        </div>
-        <div class="icon-item">
-          <img
-            src="{% static 'images/LOGO4.png' %}"
-            alt="Icono 2"
-            width="50"
-            height="50"
-          />
-          <h3>Arquitectura</h3>
-          <p>Diseño y acabados que elevan cada espacio</p>
-        </div>
-        <div class="icon-item">
-          <img
-            src="{% static 'images/LOGO5.png' %}"
-            alt="Icono 3"
-            width="50"
-            height="50"
-          />
-          <h3>Gestión y Control</h3>
-          <p>Planeación, costos claros y reportes puntuales</p>
-        </div>
-      </div>
-    </div>
-    <div>
-        {% include "mosaico_piepagina.html" %}
-    </div>
-    </div>
-</body>
-</html>
+  </div>
+</div>
+<div>
+  {% include "mosaico_piepagina.html" %}
+</div>
